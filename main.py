@@ -10,6 +10,10 @@ import os
 import firebase_admin
 from firebase_admin import credentials, auth
 
+@app.get("/")
+def home():
+    return {"message": "Welcome to the Smart Investment API!"}
+
 app = FastAPI()
 
 # Load Firebase credentials
